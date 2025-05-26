@@ -1,0 +1,22 @@
+# Node modules
+node_modules/
+
+# Env files
+.env
+
+# Log files
+logs
+*.log
+
+# Editor & system files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Runtime
+*.pid
+*.seed
+
+# OS-specific
+*.swp
