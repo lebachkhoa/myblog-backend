@@ -13,7 +13,7 @@ const sanitizeMiddleware = require("./sanitizeMiddleware.js")
 const globalMiddleware = [
     helmet(),
     cors({
-        origin: "http://localhost:****",
+        origin: process.env.CORS_HOST,
         credentials: true
     }),
     sanitizeMiddleware,
