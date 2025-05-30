@@ -88,6 +88,7 @@ const authControllers = {
             res.status(200).json({ message: "Login successful" });
 
         } catch (err) {
+            console.log("Error", err);
             res.status(500).json(err);
         }
     },
