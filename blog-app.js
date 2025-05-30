@@ -12,9 +12,10 @@ const app = express();
 app.use(globalMiddleware);
 
 app.use("/auth", authRoute);
-app.use("/", postRoute);
+app.use("/posts", postRoute);
 
-const PORT = 3000;
-app.listen(PORT, "127.0.0.1", () => {
-    console.log(`Server is running at http://127.0.0.1:${PORT}`);
+const PORT = process.env.BLOG_APP_LISTEN_PORT;
+const HOST = process.env.BLOG_APP_LISTEN_HOST;
+app.listen(PORT, HOST, () => {
+    console.log(`Server is running at ${HOST}:${PORT}`);
 });
